@@ -1,20 +1,17 @@
 # 21.04.06_Jpa-
 Jpa Repository Interface 실습
-
 공부 내용은 Test.repositorty_UserRepositoryTest에 있습니다.
-/*
+
 import com.example.jap.bookmanager.domain.User;
 import org.assertj.core.util.Lists;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.*;
-
 import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-
 import static org.springframework.data.domain.ExampleMatcher.GenericPropertyMatchers.endsWith;
 
 
@@ -31,12 +28,11 @@ class UserRepositoryTest {
         
         //findAll()
         List<User> users = userRepository.findAll(Sort.by(Sort.Direction.DESC,"name"));//이름의 역순
-        
         //findAllById()
-//        List<Long> ids = new ArrayList<>();
-//        ids.add(1L);
-//        ids.add(3L);
-//        ids.add(5L);
+        List<Long> ids = new ArrayList<>();
+        ids.add(1L);
+        ids.add(3L);
+        ids.add(5L);
         List<User> users = userRepository.findAllById(Lists.list(1L, 3L, 5L));//assertJ를 통한 라이브러리, L은 숫자가 LONG type 이라는 말
         //지정해준 id만 호출
          
@@ -114,4 +110,4 @@ class UserRepositoryTest {
         userRepository.save(user);
     }
 }
-*/
+
