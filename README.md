@@ -2,7 +2,7 @@
 Jpa Repository Interface 실습
 
 공부 내용은 Test.repositorty_UserRepositoryTest에 있습니다.
-
+/*
 import com.example.jap.bookmanager.domain.User;
 import org.assertj.core.util.Lists;
 import org.junit.jupiter.api.Test;
@@ -114,3 +114,4 @@ class UserRepositoryTest {
         userRepository.save(user);
     }
 }
+*/
